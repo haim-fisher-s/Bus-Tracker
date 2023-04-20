@@ -5,6 +5,10 @@ This module contains the main function of "Bus Tracker".
 from datetime import datetime
 
 
+def tist():
+    pass
+
+
 def main():
     """
     empty function.
