@@ -1,0 +1,29 @@
+name: Run main.py
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run main.py
+        run: python src/main.py
+
+      - name: Verify exit code
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "Error: main.py failed to run."
+            exit 1
+          else
+            echo "Success: main.py ran without errors."
+          fi
