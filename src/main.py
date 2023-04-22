@@ -3,12 +3,22 @@ This module contains the main function of "Bus Tracker".
 """
 
 from datetime import datetime
+from BTlibs.EDA import EDA
+from BTlibs.preprocessing import preprocessing
+from BTlibs.modules import conv_lstm
 
 
 def main():
     """
-    empty function.
+    demo function.
     """
+    eda = EDA.EDAPerformer()
+    preprocess = preprocessing.Preprocess()
+    module = conv_lstm.ConvLSTMInputBuilder()
+
+    eda.start()
+    preprocess.start()
+    module.start()
     return 0
 
 
