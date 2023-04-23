@@ -17,14 +17,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run main.py
-        run: python src/main.py
+      - name: Run test_notebook.py
+        run: python src/test_notebook.py
 
       - name: Verify exit code
         run: |
           if [ $? -ne 0 ]; then
-            echo "Error: main.py failed to run."
+            echo "Error: test_notebook.py failed to run."
             exit 1
           else
-            echo "Success: main.py ran without errors."
+            echo "Success: test_notebook.py ran without errors."
           fi
