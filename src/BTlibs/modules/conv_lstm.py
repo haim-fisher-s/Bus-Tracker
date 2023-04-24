@@ -22,9 +22,30 @@ class ConvLSTMInputBuilder:
         """
 
     @staticmethod
-    def start():
+    def fetch_and_pars_data():
         """
-        Starts ConvLSTM data contraction process.
+        prepare the data for ConvLSTM model.
+        """
+        print("ConvLSTM data-contracting started")
+
+    @staticmethod
+    def prepare_4D_tensors():
+        """
+        prepare the 4D tensors to train/test the model.
+        """
+        print("ConvLSTM data-contracting started")
+
+    @staticmethod
+    def get_train_4D_tensors():
+        """
+        prepare the 4D tensors to train/test the model.
+        """
+        print("ConvLSTM data-contracting started")
+
+    @staticmethod
+    def get_test_4D_tensors():
+        """
+        prepare the 4D tensors to train/test the model.
         """
         print("ConvLSTM data-contracting started")
 
@@ -42,7 +63,28 @@ class ConvLSTMModel:
         """
 
     @staticmethod
-    def start():
+    def build_model():
+        """
+        Starts ConvLSTM model.
+        """
+        print("ConvLSTM model started")
+
+    @staticmethod
+    def train():
+        """
+        Starts ConvLSTM model.
+        """
+        print("ConvLSTM model started")
+
+    @staticmethod
+    def evaluate():
+        """
+        Starts ConvLSTM model.
+        """
+        print("ConvLSTM model started")
+
+    @staticmethod
+    def predict():
         """
         Starts ConvLSTM model.
         """
