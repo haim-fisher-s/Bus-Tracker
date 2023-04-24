@@ -24,30 +24,30 @@ class ConvLSTMInputBuilder:
     @staticmethod
     def fetch_and_pars_data():
         """
-        prepare the data for ConvLSTM model.
+        Prepare the data for ConvLSTM model.
         """
-        print("ConvLSTM data-contracting started")
+        print("place holder")
 
     @staticmethod
     def prepare_4D_tensors():
         """
-        prepare the 4D tensors to train/test the model.
+        Prepare the 4D tensors to train/test the model.
         """
-        print("ConvLSTM data-contracting started")
+        print("place holder")
 
     @staticmethod
     def get_train_4D_tensors():
         """
-        prepare the 4D tensors to train/test the model.
+        Get the 4D tensors to train model.
         """
-        print("ConvLSTM data-contracting started")
+        print("place holder")
 
     @staticmethod
     def get_test_4D_tensors():
         """
-        prepare the 4D tensors to train/test the model.
+        Get the 4D tensors to test the model.
         """
-        print("ConvLSTM data-contracting started")
+        print("place holder")
 
 
 class ConvLSTMModel:
@@ -65,27 +65,27 @@ class ConvLSTMModel:
     @staticmethod
     def build_model():
         """
-        Starts ConvLSTM model.
+        Build ConvLSTM model.
         """
-        print("ConvLSTM model started")
+        print("place holder")
 
     @staticmethod
     def train():
         """
-        Starts ConvLSTM model.
+        Train the ConvLSTM model.
         """
-        print("ConvLSTM model started")
+        print("place holder")
 
     @staticmethod
     def evaluate():
         """
-        Starts ConvLSTM model.
+        Evaluate the ConvLSTM model.
         """
-        print("ConvLSTM model started")
+        print("place holder")
 
     @staticmethod
     def predict():
         """
-        Starts ConvLSTM model.
+        Predict using ConvLSTM model.
         """
-        print("ConvLSTM model started")
+        print("place holder")
