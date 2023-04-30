@@ -12,7 +12,10 @@ class EDAPerformer:
     def __init__(self):
         """Initiatlizes EDA class."""
 
-    @staticmethod
-    def start():
+    def start(self):
         """Starts EDA."""
         print("EDA started")
+        self.print_graph1()
+
+    def print_graph1(self):
+        print("print_graph")

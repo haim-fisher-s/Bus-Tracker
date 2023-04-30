@@ -60,12 +60,18 @@ def test_notebook():
     """
     Test the Bus Tracker notebook by executing it and checking for errors.
     """
-    notebook_path = "src/Bus_Tracker.ipynb"
-    if not check_notebook_existence(notebook_path):
+    main_notebook_path = "src/Bus_Tracker.ipynb"
+    if not check_notebook_existence(main_notebook_path):
+        print("Notebook file does not exist.")
+        return
+    
+    EDA_notebook_path = "src/a.ipynb"
+    if not check_notebook_existence(EDA_notebook_path):
         print("Notebook file does not exist.")
         return
 
-    execute_notebook(notebook_path)
+    execute_notebook(main_notebook_path)
+    execute_notebook(EDA_notebook_path)
     print("Notebook executed successfully.")
 
 
