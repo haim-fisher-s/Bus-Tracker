@@ -19,7 +19,7 @@ We welcome contributions to this project! Here are the steps to get started:
    ```
 3. Create a new branch for your changes in the coming format.
    ```
-   git checkout -b private/<username>/<branch name>
+  
    ```
 4. Make your changes to the code.
 5. Add any new modules or packages to the requirements.txt file.
