@@ -9,8 +9,7 @@ pip install -r requirements.txt
 ```
 This command will install all the necessary libraries and dependencies.
 
-## Contributing
-We welcome contributions to this project! Here are the steps to get started:
+
 
 1. Fork the repository to your own account.
 2. Clone the repository to your local machine using 
