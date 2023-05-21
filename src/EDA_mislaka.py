@@ -29,9 +29,13 @@ def value_numbers(df):
             print(list(df[col].unique()))
 
 
-def by_trip(df):
-    trip = pd.DataFrame(df.groupby('TripId').agg({'stopCode': 'nunique', 'NumOfUsers': 'sum', **{col: ['first'] for col in df.columns if col not in ['TripId', 'stopCode', 'NumOfUsers']}}))
+def by_trip(df: pd.DataFrame, date_column_name: str):
+    df['day'] = pd.to_datetime(df[date_column_name]).dt.day
+    df['new_TripId'] = df.apply(lambda x: f'{x["TripId"]}_{x["day"]}', axis=1)
+    df.drop(columns=['day'], inplace=True)
+    trip = pd.DataFrame(df.groupby('new_TripId').agg({'stopCode': 'nunique', 'NumOfUsers': 'sum', **{col: ['first'] for col in df.columns if col not in ['TripId', 'stopCode', 'NumOfUsers']}}))
     return trip
+
 
 def main():
     # opening data frame
@@ -41,7 +45,7 @@ def main():
     # removing unnecesry data
     mislaka = delete_unique_columns(mislaka)  # the same value for all instances
     mislaka = mislaka[mislaka['Direction'] != 0]  # a mistake. direction should be 1,2,3
-    mislaka = mislaka[mislaka['TripId'] != 0] # for now i will get rid of them.
+    mislaka = mislaka[mislaka['TripId'] != 0]  # for now i will get rid of them.
 
     # calculate day of the week
     mislaka['PlannedTripStartDate'] = pd.to_datetime(mislaka['PlannedTripStartDate'])
