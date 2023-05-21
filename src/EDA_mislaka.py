@@ -29,6 +29,9 @@ def value_numbers(df):
             print(list(df[col].unique()))
 
 
+def by_trip(df):
+    trip = pd.DataFrame(df.groupby('TripId').agg({'stopCode': 'nunique', 'NumOfUsers': 'sum', **{col: ['first'] for col in df.columns if col not in ['TripId', 'stopCode', 'NumOfUsers']}}))
+    return trip
 
 def main():
     # opening data frame
@@ -36,7 +39,13 @@ def main():
     mislaka = pd.read_csv(path)
 
     # removing unnecesry data
-    mislaka = delete_unique_columns(mislaka)
+    mislaka = delete_unique_columns(mislaka)  # the same value for all instances
+    mislaka = mislaka[mislaka['Direction'] != 0]  # a mistake. direction should be 1,2,3
+    mislaka = mislaka[mislaka['TripId'] != 0] # for now i will get rid of them.
+
+    # calculate day of the week
+    mislaka['PlannedTripStartDate'] = pd.to_datetime(mislaka['PlannedTripStartDate'])
+    mislaka['day_of_week'] = mislaka['PlannedTripStartDate'].dt.day_name()
 
     # basic data checking
     print('data set info:', mislaka.info(), sep='\n')
