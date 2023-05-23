@@ -60,6 +60,11 @@ def main():
 
     print('number of trip that didnt start: ', mislaka['TripStartDateTime'].isna().sum())
 
+    # creating line number:
+    mislaka['line_number'] = mislaka.apply(lambda x: f'{x.RouteId}-{x.Direction}-{x.Alternative}', axis=1)
+
+    # compare to GTFS
+    lines['Num_of_stations'] = lines['stop_order'].apply(len)
 
 if __name__ == '__main__':
     main()
