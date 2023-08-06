@@ -1,0 +1,14 @@
+PlannedTripStartDate: Planned trip departure date
+PlannedTripStartTime: Planned trip departure time
+AgencyName: Operator name
+AgencyId: operator code
+ClusterName: cluster name
+ClusterId: Cluster code
+RouteId: line ID number - first 2 digits = number of instances of the line, last 3 digits = number of the line
+Direction: Line direction direction 1, 2, or 3. Reciprocating and rotary respectively
+TripId: trip identifier - single-valued in connection with date
+LicensePlate: License Plate Vehicle identification plate
+StopCode: The station code
+StopName: The name of the station
+DayPeriod: - divided into 7 day periods according to the definitions of the Ministry of Transport (peak and trough)
+NumOfUsers: Number of users

@@ -1,0 +1,25 @@
+ValidTrip: ValidTrip
+AgencyId: operator code
+AgencyName: Operator name
+ClusterName: cluster name
+RouteId: line ID number - first 2 digits = number of instances of the line, last 3 digits = number of the line
+Direction: Line direction direction 1, 2, or 3. Reciprocating and rotary respectively
+Alternative: no idea what is this
+RouteShortName: 2 last number of RouteId
+TripStartDate: trip date
+TripStartTime: no idea what is this
+PlannedTripStartTime: Planned Trip Start Time
+StopCode: The station code
+StopName: The name of the station 
+StopSequence: The order of the current or last stop the vehicle was at. Starts from 1, and corresponds to stop_sequence in the stop_times table in GTFS 
+DayInWeek: day in the week
+StationStatus_rb_cd: no idea what is this
+LicensePlate: Vehicle identification plate number
+TripId: trip identifier - single-valued in connection with date
+OpenDoorDateTime: open dor time (a num between 0 to 60 what indicates time inside the our not actual time)
+CloseDoorDateTime: close dor time (a num between 0 to 60 what indicates time inside the our not actual time)
+PassengersUpSum: how match passengers up on bus
+PassengersDownSum: how match passengers down from bus
+PassengersContinue: how match passengers om bus
+Lat: stop latitude coordinate - WGS84
+Long: stop Longitudinal coordinate - WGS84
