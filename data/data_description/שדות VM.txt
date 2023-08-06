@@ -1,0 +1,23 @@
+messageCreationTime: The VM transmitter creation time. The frequency of the update according to the requirement of the Ministry of Transport, broadcast every 15 seconds, even if the vehicle is not moving.
+messageRecordingTime: The time when a new location was recorded after a move. The time will not be updated as long as the vehicle is stationary
+tripStopRecordId: to be ignored, dropped later
+messageReceiveTime: The time when the VM transmitter was received in Moran (Moran: name of the system).
+operatorMessageId: to ignore, dropped later
+realTimeMonitoringFailure: to ignore, dropped later
+tripEndReasonCode: trip end message. Provides information and the trip did not go as planned. During a normal trip, "NormalTermination" will be displayed at the end.
+coordinateX: latitude coordinate - WGS84
+coordinateY: Longitudinal coordinate - WGS84
+DatedVehicleJourneyRef: Equivalent to TripId A single-valued identifier of a trip combined with a date
+VehicleRef: Vehicle identification plate number
+bearing: direction in degrees relative to the north. Use really carefully, because I'm not always accurate, especially after a face.
+velocity: Speed in km/h. It is highly recommended not to use, because this figure is not of high quality.
+distanceFromStart: Distance in meters from the start of the trip. Distance between stations only and not between signal and the signal.
+percentageFromStart: A percentage of the distance in passing near stations to speak of the total trip.
+stopId: stop_code value of the current or last stop (in the GTFS stop table) where the vehicle was.
+stopOrder: The order of the current or last stop the vehicle was at. Starts from 1, and corresponds to stop_sequence in the stop_times table in GTFS
+stopOnRequest: to ignore, dropped later
+actualArrivalTime: Time of entry to the current or last stop where the bus was
+actualDepartureTime: Departure time from the current or last station where the bus was
+aimedDepartureTime: Planned departure time. Can change if departure is delayed.
+operatorId: operator code. Same as the value of agency_id,
+vehicleAtStop: Is the vehicle at the stop. Calculated according to radius, and not really that the car is standing at the station. 100m distance range
